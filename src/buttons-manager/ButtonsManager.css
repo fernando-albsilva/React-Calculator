@@ -1,0 +1,54 @@
+.ButtonsManager {
+	height: calc(100% - 185px);
+	width: 100%;
+	background-color: #2c2c2c;
+	gap: 5px;
+	border: 1px solid rgb(30, 30, 30);
+	border-radius: 0px 0px 5px 5px;
+	border-top: none;
+}
+
+.row1col1 { grid-area: row1col1; }
+.row1col2 { grid-area: row1col2; }
+.row1col3 { grid-area: row1col3; }
+.row1col4 { grid-area: row1col4; }
+.row1col5 { grid-area: row1col5; }
+
+.row2col1 { grid-area: row2col1; }
+.row2col2 { grid-area: row2col2; }
+.row2col3 { grid-area: row2col3; }
+.row2col4 { grid-area: row2col4; }
+.row2col5 { grid-area: row2col5; }
+
+.row3col1 { grid-area: row3col1; }
+.row3col2 { grid-area: row3col2; }
+.row3col3 { grid-area: row3col3; }
+.row3col4 { grid-area: row3col4; }
+.row3col5 { grid-area: row3col5; }
+
+.row4col1 { grid-area: row4col1; }
+.row4col2 { grid-area: row4col2; }
+.row4col3 { grid-area: row4col3; }
+.row4col4 { grid-area: row4col4; }
+.row4col5 { grid-area: row4col5; }
+
+.row5col1 { grid-area: row5col1; }
+.row5col2 { grid-area: row5col2; }
+.row5col3 { grid-area: row5col3; }
+.row5col4 { grid-area: row5col4; }
+.row5col5 { grid-area: row5col5; }
+
+.resultButton { grid-area: resultButton; }
+
+
+.grid-container {
+	display: grid;
+	grid-template-areas:
+		"row1col1 row1col2 row1col3 row1col4 row1col5"
+        "row2col1 row2col2 row2col3 row2col4 row2col5"
+        "row3col1 row3col2 row3col3 row3col4 row3col5"
+        "row4col1 row4col2 row4col3 row4col4 resultButton"
+        "row5col1 row5col2 row5col3 row5col4 resultButton";
+	gap: 8px;
+	padding: 10px;
+}
