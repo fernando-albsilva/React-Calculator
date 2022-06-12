@@ -4,24 +4,23 @@ import { useState } from "react";
 import ResultScreen from "./result-screen/ResultScreen";
 import InputScreen from "./input-screen/InputScreen";
 import ButtonsManager from "./buttons-manager/ButtonsManager";
-import { ButtonOption } from './models/CalculatorModels';
-const mathExpressionHandler = require('math-expression-evaluator');
-
+import { ButtonOption } from "./models/CalculatorModels";
+const mathExpressionHandler = require("math-expression-evaluator");
 
 const App = () => {
-	const [result, setResult] = useState(['0']);
-	const [expression, setExpression] = useState(0);
+	const [result, setResult] = useState(["0"]);
+	const [expression, setExpression] = useState("0");
 
 	const handleButtonClicked = (value) => {
 		switch (value) {
 			case ButtonOption.clear:
 				clear();
 				break;
-			
+
 			case ButtonOption.result:
 				calculateResult();
 				break;
-		
+
 			default:
 				updateExpression(value);
 				break;
@@ -29,32 +28,37 @@ const App = () => {
 	};
 
 	function clear() {
-		setExpression('0');
+		setExpression("0");
 		setResult([0]);
 	}
 
 	function calculateResult() {
-		setResult( (previewsValue) => {
-			return [...result,`${expression} = ${mathExpressionHandler.eval(expression)}`]
+		if (expression === "") {
+			return;
+		}
+
+		setResult((previewsValue) => {
+			return [...result, `${expression} = ${mathExpressionHandler.eval(expression)}`];
 		});
-		setExpression('0');
+
+		setExpression("0");
 	}
 
 	function updateExpression(value) {
-		const mustClearLeftZero = expression === '0';
+		const mustClearLeftZero = expression === "0";
 
-		if(mustClearLeftZero){
-			setExpression('');
+		if (mustClearLeftZero) {
+			setExpression("");
 		}
 
-		setExpression(previewsValue => previewsValue + value);
+		setExpression((previewsValue) => previewsValue + value);
 	}
 
 	return (
 		<div className="App">
 			<ResultScreen result={result} />
-			<InputScreen expression={expression}/>
-			<ButtonsManager onButtonClicked={handleButtonClicked}/>
+			<InputScreen expression={expression} />
+			<ButtonsManager onButtonClicked={handleButtonClicked} />
 		</div>
 	);
 };

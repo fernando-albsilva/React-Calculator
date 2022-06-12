@@ -30,12 +30,12 @@ const ButtonsManager = (props) => {
                 <Button class={'row4col1'}     styleType={'standard'}     label={'1'}          onClick={() => {props.onButtonClicked(ButtonOption.one)}}/>
                 <Button class={'row4col2'}     styleType={'standard'}     label={'2'}          onClick={() => {props.onButtonClicked(ButtonOption.two)}}/>
                 <Button class={'row4col3'}     styleType={'standard'}     label={'3'}          onClick={() => {props.onButtonClicked(ButtonOption.three)}}/>
-                <Button class={'row4col4'}     styleType={'standard'}     label={'-'}          onClick={() => {props.onButtonClicked(ButtonOption.divisor)}}/>
+                <Button class={'row4col4'}     styleType={'standard'}     label={'-'}          onClick={() => {props.onButtonClicked(ButtonOption.sub)}}/>
                 <Button class={'resultButton'} styleType={'resultButton'} label={'='}          onClick={() => {props.onButtonClicked(ButtonOption.result)}}/>
 
                 <Button class={'row5col1'}     styleType={'standard'}     label={'0'}          onClick={() => {props.onButtonClicked(ButtonOption.zero)}}/>
                 <Button class={'row5col2'}     styleType={'standard'}     label={','}          onClick={() => {props.onButtonClicked(ButtonOption.comma)}}/>
-                <Button class={'row5col3'}     styleType={'standard'}     label={'%'}          onClick={() => {props.onButtonClicked('%')}}/>
+                <Button class={'row5col3'}     styleType={'standard'}     label={'%'}/>
                 <Button class={'row5col4'}     styleType={'standard'}     label={'+'}          onClick={() => {props.onButtonClicked(ButtonOption.sum)}}/>
             </div>
         </div>
