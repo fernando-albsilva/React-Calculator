@@ -1,6 +1,6 @@
 # Acess the project on web
 
-https://dashboard.heroku.com/apps/reactcalculator999/deploy/github
+https://reactcalculator999.herokuapp.com/
 
 ## Simple calculator for ReactJs study
 
