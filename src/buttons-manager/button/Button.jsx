@@ -3,8 +3,8 @@ import "./Button.css";
 
 const Button = (props) => {
 	return (
-		<div className="Button" class={props.class} onClick={props.onClick}>
-			<button class={props.styleType}>{props.label ? props.label : "teste botao simples"}</button>
+		<div className={'Button ' + props.clazz} onClick={props.onClick}>
+			<button className={props.styleType}>{props.label ? props.label : "teste botao simples"}</button>
 		</div>
 	);
 };
