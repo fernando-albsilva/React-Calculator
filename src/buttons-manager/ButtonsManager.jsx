@@ -10,22 +10,22 @@ const ButtonsManager = (props) => {
         <div className='ButtonsManager'>
             <div className='grid-container'>
                 <Button clazz={'row1col1'}     styleType={'clearButton'}  label={'x'}          onClick={() => {props.onButtonClicked(ButtonOption.clear)}}/>
-                <Button clazz={'row1col2'}     styleType={'standard'}     label={'botao2'}/>
-                <Button clazz={'row1col3'}     styleType={'standard'}     label={'botao3'}/>
-                <Button clazz={'row1col4'}     styleType={'standard'}     label={'botao4'}/>
-                <Button clazz={'row1col5'}     styleType={'standard'}     label={'botao5'}/>
+                <Button clazz={'row1col2'}     styleType={'standard'}     label={'('}          onClick={() => {props.onButtonClicked(ButtonOption.leftParenthesis)}}/>
+                <Button clazz={'row1col3'}     styleType={'standard'}     label={')'}          onClick={() => {props.onButtonClicked(ButtonOption.rightParenthesis)}}/>
+                <Button clazz={'row1col4'}     styleType={'standard'}     label={'mod'}        onClick={() => {props.onButtonClicked(ButtonOption.mod)}}/>
+                <Button clazz={'row1col5'}     styleType={'standard'}     label={' '}/>
 
                 <Button clazz={'row2col1'}     styleType={'standard'}     label={'7'}          onClick={() => {props.onButtonClicked(ButtonOption.seven)}}/>
                 <Button clazz={'row2col2'}     styleType={'standard'}     label={'8'}          onClick={() => {props.onButtonClicked(ButtonOption.eight)}}/>
                 <Button clazz={'row2col3'}     styleType={'standard'}     label={'9'}          onClick={() => {props.onButtonClicked(ButtonOption.nine)}}/>
                 <Button clazz={'row2col4'}     styleType={'standard'}     label={'/'}          onClick={() => {props.onButtonClicked(ButtonOption.divisor)}}/>
-                <Button clazz={'row2col5'}     styleType={'standard'}     label={'botao10'}/>
+                <Button clazz={'row2col5'}     styleType={'standard'}     label={'√'}          onClick={() => {props.onButtonClicked(ButtonOption.rootOperator)}}/>
 
                 <Button clazz={'row3col1'}     styleType={'standard'}     label={'4'}          onClick={() => {props.onButtonClicked(ButtonOption.fourth)}}/>
                 <Button clazz={'row3col2'}     styleType={'standard'}     label={'5'}          onClick={() => {props.onButtonClicked(ButtonOption.five)}}/>
                 <Button clazz={'row3col3'}     styleType={'standard'}     label={'6'}          onClick={() => {props.onButtonClicked(ButtonOption.six)}}/>
                 <Button clazz={'row3col4'}     styleType={'standard'}     label={'*'}          onClick={() => {props.onButtonClicked(ButtonOption.multiplier)}}/>
-                <Button clazz={'row3col5'}     styleType={'standard'}     label={'botao15'}/>
+                <Button clazz={'row3col5'}     styleType={'standard'}     label={'x²'}         onClick={() => {props.onButtonClicked(ButtonOption.powerOperator)}}/>
 
                 <Button clazz={'row4col1'}     styleType={'standard'}     label={'1'}          onClick={() => {props.onButtonClicked(ButtonOption.one)}}/>
                 <Button clazz={'row4col2'}     styleType={'standard'}     label={'2'}          onClick={() => {props.onButtonClicked(ButtonOption.two)}}/>

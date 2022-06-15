@@ -17,6 +17,11 @@ export const ButtonOption = {
 	multiplier: "*",
 	divisor: "/",
 	comma: ".",
+	leftParenthesis: "(",
+	rightParenthesis: ")",
+	mod: "Mod",
+	powerOperator: "^",
+	rootOperator: "root",
 
 	//actions
 	clear: "clear",
