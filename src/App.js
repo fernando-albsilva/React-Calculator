@@ -37,9 +37,17 @@ const App = () => {
 			return;
 		}
 
-		setResult((previewsValue) => {
-			return [...result, `${expression} = ${mathExpressionHandler.eval(expression)}`];
-		});
+		try {
+			const expressionResult = mathExpressionHandler.eval(expression);
+
+			setResult((previewsValue) => {
+				return [...result, `${expression} = ${expressionResult}`];
+			});
+		} catch (error) {
+			setResult((previewsValue) => {
+				return [...result, `${expression} = 'Invalid expression'`];
+			});
+		}
 
 		setExpression("0");
 	}
