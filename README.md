@@ -5,6 +5,6 @@ https://reactcalculator999.herokuapp.com/
 ## Simple calculator for ReactJs study
 
 <p align=center>
-    <img src="./public/ReactCalculator.png">
+    <img src="./src/assets/ReactCalculator.png">
 </p>
 
